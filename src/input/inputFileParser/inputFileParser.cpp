@@ -22,6 +22,7 @@
 
 #include "inputFileParser.hpp"
 
+#include <algorithm>     // for algorithm
 #include <format>        // for format
 #include <string_view>   // for string_view
 
@@ -121,7 +122,13 @@ void InputFileParser::addKeyword(
     bool               required
 )
 {
-    const auto keywordLowerCase = toLowerCopy(keyword);
+    auto keywordLowerCase = toLowerCopy(keyword);
+    std::replace(
+        keywordLowerCase.begin(),
+        keywordLowerCase.end(),
+        '-',
+        '_'
+    );   // replace dashes with underscores
     _keywordFuncMap.try_emplace(keywordLowerCase, parserFunc);
     _keywordRequiredMap.try_emplace(keywordLowerCase, required);
     _keywordCountMap.try_emplace(keywordLowerCase, 0);
