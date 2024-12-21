@@ -127,9 +127,10 @@ std::vector<std::string> utilities::splitString(const std::string &line)
  * @param myString
  * @return string
  */
-std::string utilities::toLowerCopy(std::string myString)
+std::string utilities::toLowerAndReplaceDashesCopy(std::string myString)
 {
     std::ranges::for_each(myString, [](char &c) { c = char(::tolower(c)); });
+    replace(myString.begin(), myString.end(), '-', '_');
     return myString;
 }
 
@@ -139,9 +140,9 @@ std::string utilities::toLowerCopy(std::string myString)
  * @param myString
  * @return string
  */
-std::string utilities::toLowerCopy(const std::string_view myString)
+std::string utilities::toLowerAndReplaceDashesCopy(const std::string_view myString)
 {
-    return toLowerCopy(std::string(myString));
+    return toLowerAndReplaceDashesCopy(std::string(myString));
 }
 
 /**
