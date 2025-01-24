@@ -80,6 +80,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#info-file">Info File</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#instant-energy-file">Instant Energy File</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#momentum-file">Momentum File</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#reference-file">Reference File</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#restart-file">Restart File</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#stress-file">Stress File</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#timings-file">Timings File</a></li>
@@ -100,6 +101,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#setup-file-keys">Setup File Keys</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#moldesctiptor-file">Moldesctiptor File</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#guff-file">GUFF File</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dftb-setup-file">DFTB Setup File</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#topology-file">Topology File</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#parameter-file">Parameter File</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#mshake-file">MSHake_File</a></li>
@@ -522,6 +524,17 @@
 <p>The <code class="docutils literal notranslate"><span class="pre">momentum_file</span></code> keyword sets the name for the <a class="reference internal" href="outputFiles.html#momentumfile"><span class="std std-ref">Momentum File</span></a>, which stores information about the total linear and total angular momentum throughout the MD simulation.</p>
 <p class="centered">
 <strong><em>default value</em> = “default.mom”</strong></p></section>
+<section id="reference-file">
+<span id="referencefilekey"></span><h3>Reference File<a class="headerlink" href="#reference-file" title="Link to this heading"></a></h3>
+<div class="tip admonition">
+<p class="admonition-title">Key</p>
+<blockquote>
+<div><p>reference_file = {file} -&gt; “default.ref”</p>
+</div></blockquote>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">reference_file</span></code> keyword sets the name for the <a class="reference internal" href="outputFiles.html#reffile"><span class="std std-ref">Reference File</span></a>, which lists the sources to be cited when publishing data with the chosen settings.</p>
+<p class="centered">
+<strong><em>default value</em> = “default.ref”</strong></p></section>
 <section id="restart-file">
 <span id="rstfilekey"></span><h3>Restart File<a class="headerlink" href="#restart-file" title="Link to this heading"></a></h3>
 <div class="tip admonition">
@@ -651,6 +664,13 @@ input file. Further information about the individual files can be found in the <
 <div class="tip admonition">
 <p class="admonition-title">Key</p>
 <p>guff_file = {file} -&gt; “guff.dat”</p>
+</div>
+</section>
+<section id="dftb-setup-file">
+<span id="dftbfilekey"></span><h3>DFTB Setup File<a class="headerlink" href="#dftb-setup-file" title="Link to this heading"></a></h3>
+<div class="tip admonition">
+<p class="admonition-title">Key</p>
+<p>dftb_file = {file} -&gt; “dftb_in.template”</p>
 </div>
 </section>
 <section id="topology-file">
